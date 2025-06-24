@@ -1,0 +1,3 @@
+rogalmic.bash-debug
+alefragnani.project-manager
+pomdtr.excalidraw-editor
