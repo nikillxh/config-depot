@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Access websites easily
+
 case "$1" in
   sepolia)
     case "$2" in
@@ -30,4 +32,8 @@ case "$1" in
     echo "   mine   - Mine Sepolia faucet"
     echo "   scan   - Sepolia Etherscan"
     echo "   google - Google Cloud Faucet"
+  ;;
+  *)
+    echo "Enter -h for help"
+    ;;
 esac

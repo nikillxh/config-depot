@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Compress PDFs
 # $1 is input.pdf
 # $2 is output.pdf
 
