@@ -25,14 +25,14 @@ if [[ -n "$BASH_VERSION" ]]; then
     echo "Adding ~/.wrapper to PATH in .bashrc..."
     echo 'export PATH="$HOME/.wrapper:$PATH"' >> "$HOME/.bashrc"
   fi
-  export PATH="$HOME/.wrapper:$PATH"
+  export PATH="$DEST:$PATH"
 fi
 
 # === FISH ===
 if command -v fish >/dev/null; then
-  if ! fish -c 'echo $PATH' | grep -q "$WRAPPER_PATH"; then
+  if ! fish -c "contains '$DEST' \$fish_user_paths"; then
     echo "Adding ~/.wrapper to PATH in fish..."
-    fish -c "set -U fish_user_paths $WRAPPER_PATH \$fish_user_paths"
+    fish -c "fish_add_path -m $DEST"
   fi
 fi
 

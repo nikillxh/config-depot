@@ -26,7 +26,7 @@ case "$1" in
     esac
   ;;
   -h)
-    echo "Usage: $0 <command> [option]"
+    echo "Usage: blockchain.sh <command> [option]"
     echo "Commands:"
     echo "> sepolia -> Open faucet, scan or google faucet"
     echo "   mine   - Mine Sepolia faucet"
