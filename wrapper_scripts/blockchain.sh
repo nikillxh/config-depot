@@ -2,10 +2,14 @@
 
 # Access websites easily
 
+# Import variables
+VAR_FILE="variables.json"
+
 case "$1" in
   sepolia)
     case "$2" in
       mine)
+        echo "$(jq -r '.eth_testnutter' $VAR_FILE)" | xclip -selection clipboard
         xdg-open https://sepolia-faucet.pk910.de/
         ;;
       scan)
